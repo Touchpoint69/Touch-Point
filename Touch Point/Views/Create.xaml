@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         
-        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="250" FocusVisualPrimaryBrush="{x:Null}" FontSize="40"/>
+        <Button x:Name="_CourseButton_" Content="Kurserrt" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="250" FocusVisualPrimaryBrush="{x:Null}" FontSize="40"/>
         
         <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="515,10,0,0" VerticalAlignment="Top" Width="250" FocusVisualPrimaryBrush="{x:Null}" FontSize="40"/>
         

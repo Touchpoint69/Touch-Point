@@ -103,8 +103,14 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="ViewModels\ViewModelCreate.cs" />
-    <Compile Include="Views\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
+    <Compile Include="Views\CreateCourse.xaml.cs">
+      <DependentUpon>CreateCourse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateStudent.xaml.cs">
+      <DependentUpon>CreateStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateTeacher.xaml.cs">
+      <DependentUpon>CreateTeacher.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,7 +138,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Create.xaml">
+    <Page Include="Views\CreateCourse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateTeacher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

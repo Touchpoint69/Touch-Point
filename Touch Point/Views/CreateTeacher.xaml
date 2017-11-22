@@ -11,11 +11,11 @@
 
         <!--Navigation Buttons-->
 
-        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40"/>
+        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" Click="_CourseButton__Click"/>
 
         <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="515,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40"/>
 
-        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="980,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40"/>
+        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="980,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" Click="_StudentButton__Click"/>
 
         <!--List View-->
 

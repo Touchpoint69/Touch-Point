@@ -26,5 +26,15 @@ namespace Touch_Point.Views
         {
             this.InitializeComponent();
         }
+
+        private void _CourseButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreateCourse));
+        }
+
+        private void _TeacherButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreateTeacher));
+        }
     }
 }

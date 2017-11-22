@@ -30,7 +30,7 @@ namespace Touch_Point
 
         private void _MainPageButton__Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Views.CreateTeacher));
+            Frame.Navigate(typeof(Views.CreateCourse));
         }
     }
 }

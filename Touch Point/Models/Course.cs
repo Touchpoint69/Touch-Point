@@ -10,8 +10,14 @@ namespace Touch_Point
     {
         int _courseID;
         string _name;
-        string _location;
         DateTimeOffset _time;
         string _teacher;
+
+        public Course(int _courseID,string _name, DateTimeOffset _time, string _teacher)
+        {
+            
+        }
+        
+        
     }
 }

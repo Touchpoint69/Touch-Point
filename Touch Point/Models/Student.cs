@@ -14,5 +14,10 @@ namespace Touch_Point
         string _address;
         string _phone;
         string _email;
+
+        public Student(int _studentID,string _name,int _SSN,string _address,string _phone,string _email)
+        {
+
+        }
     }
 }

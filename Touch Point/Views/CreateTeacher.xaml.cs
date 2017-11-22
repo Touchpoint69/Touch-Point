@@ -13,24 +13,27 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Touch_Point
+namespace Touch_Point.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CreateTeacher : Page
     {
-        public MainPage()
+        public CreateTeacher()
         {
             this.InitializeComponent();
         }
 
-
-        private void _MainPageButton__Click(object sender, RoutedEventArgs e)
+        private void _CourseButton__Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Views.CreateTeacher));
+            Frame.Navigate(typeof(CreateCourse));
+        }
+        private void _StudentButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreateStudent));
         }
     }
 }

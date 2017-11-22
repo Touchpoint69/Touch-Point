@@ -12,7 +12,7 @@ namespace Touch_Point
         string _name;
         int _SSN;
         string _address;
-        string _phone;
+        int _phone;
         string _email;
 
         public Teacher(int _teacherID,string _name,int _SSN,string _address,string _phone,string _email)

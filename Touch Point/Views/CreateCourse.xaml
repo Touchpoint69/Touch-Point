@@ -2,12 +2,13 @@
     x:Class="Touch_Point.Views.CreateCourse"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Touch_Point.Views"
+    xmlns:local="using:Touch_Point"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
 
         <!--Navigation Buttons-->
 
@@ -19,7 +20,8 @@
 
         <!--List View-->
 
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0"/>
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" DataContext="Course" ItemsSource="{Binding Course.Courses , Mode=TwoWay}"/>
+
 
         <!--Titles-->
 

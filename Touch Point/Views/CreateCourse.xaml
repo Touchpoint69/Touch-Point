@@ -30,7 +30,7 @@
 
         <!--List View-->
 
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" DataContext="Course" ItemsSource="{Binding Course.Courses , Mode=TwoWay}"/>
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" DataContext="Course" ItemsSource="{Binding Course.Courses, Mode=TwoWay}"/>
 
 
         <!--Titles-->
@@ -50,10 +50,10 @@
         <DatePicker HorizontalAlignment="Left" Margin="50,360,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Date].Enabled}" Visibility="{Binding ViewControlStates[Date].VisibilityState}" Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <ComboBox HorizontalAlignment="Left" Margin="50,410,0,0" Width="550"  Background="#66F0F0F0"
-            IsEnabled="{Binding ViewControlStates[Salesperson].Enabled}"
-            Visibility="{Binding ViewControlStates[Salesperson].VisibilityState}"
-            ItemsSource="{Binding DetailsViewModel.CollectionSalesperson}" 
-            SelectedItem="{Binding DetailsViewModel.SelectedSalesperson, Mode=TwoWay}">
+            IsEnabled="{Binding ViewControlStates[Teacher].Enabled}"
+            Visibility="{Binding ViewControlStates[Teacher].VisibilityState}"
+            ItemsSource="{Binding DetailsViewModel.CollectionTeacher}" 
+            SelectedItem="{Binding DetailsViewModel.SelectedTeacher, Mode=TwoWay}">
             <ComboBox.ItemTemplate>
 
                 <DataTemplate>

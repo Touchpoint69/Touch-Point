@@ -6,6 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="TextBlockInSubComboStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="650"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -23,9 +33,9 @@
 
         <!--Titles-->
 
-        <TextBlock Margin="50,150,700,0" Text="Details" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,150,700,0" Text="Details" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
 
-        <TextBlock Margin="690,150,50,0" Text="List View" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="690,150,50,0" Text="List View" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
 
         <!--Text Boxes to fill out information-->
 
@@ -37,7 +47,27 @@
 
         <DatePicker HorizontalAlignment="Left" Margin="50,360,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Date].Enabled}" Visibility="{Binding ViewControlStates[Date].VisibilityState}" Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,460,0,0" Text="Underviser" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,410,0,0" Width="550"  Background="#66F0F0F0"
+            IsEnabled="{Binding ViewControlStates[Salesperson].Enabled}"
+            Visibility="{Binding ViewControlStates[Salesperson].VisibilityState}"
+            ItemsSource="{Binding DetailsViewModel.CollectionSalesperson}" 
+            SelectedItem="{Binding DetailsViewModel.SelectedSalesperson, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+
+                <DataTemplate>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <!--<Image Source="{Binding ImageSource}" Height="60" Width="60" />-->
+                        <TextBlock Style="{StaticResource TextBlockInSubComboStyle}" 
+                            Text="{Binding Description}" />
+                    </StackPanel>
+
+                </DataTemplate>
+
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 

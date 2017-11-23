@@ -36,5 +36,10 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(CreateStudent));
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

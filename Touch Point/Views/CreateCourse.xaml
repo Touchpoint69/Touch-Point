@@ -33,11 +33,7 @@
 
         <!--List View-->
 
-<<<<<<< HEAD
         <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0"  ItemsSource="{Binding Courses , Mode=TwoWay}"/>
-=======
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" DataContext="Course" ItemsSource="{Binding Course.Courses, Mode=TwoWay}"/>
->>>>>>> 27cdd46d6ebf531a11084d1401e653e6d6ce0983
 
 
         <!--Titles-->

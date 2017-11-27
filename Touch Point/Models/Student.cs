@@ -24,8 +24,7 @@ namespace Touch_Point
             _phone = phone;
             _email = email;
         }
-
-        Student aTeacher = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");
+        Student aStudent = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");
 
     }
 }

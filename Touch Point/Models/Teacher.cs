@@ -15,9 +15,10 @@ namespace Touch_Point
         int _phone;
         string _email;
 
-        public Teacher(int _teacherID,string _name,int _SSN,string _address,string _phone,string _email)
+        public Teacher(int _teacherID,string _name,int _SSN,string _address,int _phone,string _email)
         {
 
         }
+        Teacher T1 = new Teacher(1, "jørgen", 1234562222, "wayofthefist 222", 22334455, "Theman@gmail.com");
     }
 }

@@ -44,10 +44,15 @@ namespace Touch_Point
         {
             Courses = new ObservableCollection<Course>();
             Course C1 = new Course(11, "Zoneterapi", 12 / 12 / 12, "Jørgen");
-            Course C2 = new Course(11, "Zoneterapi", 12 / 12 / 12, "Jørgen");
+            Course C2 = new Course(11, "Ninja", 12 / 12 / 12, "Bolette");
             Courses.Add(C1);
             Courses.Add(C2);
         }
+        public override string ToString()
+        {
+            return "This is a " + _name + " Kursus Afholdt af " + _teacher;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged

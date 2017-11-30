@@ -11,6 +11,7 @@ namespace Touch_Point
 {
     public class Course
     {
+        //Instance Fields
         int _courseID;
         string _name;
         //DateTimeOffset _time;
@@ -18,7 +19,8 @@ namespace Touch_Point
 
 
         public Course(int courseID,string name,int sampletid , string teacher)
-        {//DateTimeOffset _time
+        {//Contructor for et Course objekt
+            //DateTimeOffset _time
             _courseID = courseID;
             _name = name;
             //Sampletid skal erstattes af datetime
@@ -29,6 +31,7 @@ namespace Touch_Point
         {
         }
 
+        //******* Til at gøre instacne fieldsne settable for andre klasser
         public int CourseId
         {
             get { return _courseID; }
@@ -45,7 +48,7 @@ namespace Touch_Point
             get { return _teacher; }
             set { _teacher = value; }
         }
-
+        //override metode så det ser godt ud i listen
         public override string ToString()
         {
             return "This is a " + _name + " Kursus Afholdt af " + _teacher;

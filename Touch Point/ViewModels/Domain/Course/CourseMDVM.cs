@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Touch_Point.ViewModels.Domain.Course
 {
     public class CourseMDVM : INotifyPropertyChanged
-    {
+    {//Creater nye objekter i systemet
         public CourseMDVM()
         {
             Courses = new ObservableCollection<Touch_Point.Course>();
@@ -19,9 +19,11 @@ namespace Touch_Point.ViewModels.Domain.Course
             Courses.Add(C1);
             Courses.Add(C2);
         }
+        //Det virkede ikke ude disse
         private ObservableCollection<Touch_Point.Course> _courses;
         private Touch_Point.Course _selectedCourse;
 
+        //Contructor for en lister af Courses
         public ObservableCollection<Touch_Point.Course> Courses
         {
             get { return _courses; }
@@ -29,6 +31,7 @@ namespace Touch_Point.ViewModels.Domain.Course
 
         }
 
+        //Metode til at vælge elementer i listen
         public Touch_Point.Course SelectedCourse
         {
             get { return _selectedCourse; }
@@ -38,7 +41,7 @@ namespace Touch_Point.ViewModels.Domain.Course
                 OnPropertyChanged();
             }
         }
-
+        //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

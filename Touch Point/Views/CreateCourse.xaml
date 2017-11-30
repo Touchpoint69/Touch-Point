@@ -44,11 +44,11 @@
 
         <!--Text Boxes to fill out information-->
 
-        <TextBox HorizontalAlignment="Left" Margin="50,210,0,0" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,210,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,260,0,0" Text="{Binding SelectedCourse.Name}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,260,0,0" PlaceholderText="Kursus Navn" Text="{Binding SelectedCourse.Name}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,310,0,0" Text="Lokale" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,310,0,0" PlaceholderText ="Lokale" Text="Lokale" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <DatePicker HorizontalAlignment="Left" Margin="50,360,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Date].Enabled}" Visibility="{Binding ViewControlStates[Date].VisibilityState}" Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
 

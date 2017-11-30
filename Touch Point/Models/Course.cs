@@ -31,7 +31,7 @@ namespace Touch_Point
         {
         }
 
-        //******* Til at gøre instacne fieldsne settable for andre klasser
+        //Properties Til at gøre instance fields settable for andre klasser
         public int CourseId
         {
             get { return _courseID; }

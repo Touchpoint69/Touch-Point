@@ -25,9 +25,6 @@ namespace Touch_Point
             _teacher = teacher; // teacher skal være objektet teacher ikke en string
         }
 
-        //ObservableCollection<Course> CourseList = new ObservableCollection<Course>();
-        //Course C1 = new Course(11,"Zoneterapi",12/12/12,"Jørgen"); 
-
         public Course()
         {
         }
@@ -35,6 +32,18 @@ namespace Touch_Point
         public int CourseId
         {
             get { return _courseID; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public string Teacher
+        {
+            get { return _teacher; }
+            set { _teacher = value; }
         }
 
         public override string ToString()

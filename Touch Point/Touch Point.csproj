@@ -99,6 +99,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
@@ -108,12 +109,7 @@
     <Compile Include="ViewModels\Base\MasterViewModel.cs" />
     <Compile Include="ViewModels\Base\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Course\CourseMDVM.cs" />
-    <Compile Include="ViewModels\Domain\Teacher\DetailViewModel.cs" />
-    <Compile Include="ViewModels\Domain\Teacher\ItemViewModel.cs" />
-    <Compile Include="ViewModels\Domain\Teacher\MasterDetailViewModel.cs" />
-    <Compile Include="ViewModels\Domain\Teacher\MasterViewModel.cs" />
-    <Compile Include="ViewModels\Domain\Teacher\ViewModelFactory.cs" />
-    <Compile Include="ViewModels\ViewModelCreate.cs" />
+    <Compile Include="ViewModels\Domain\Teacher\TeacherMDVM.cs" />
     <Compile Include="Views\CreateCourse.xaml.cs">
       <DependentUpon>CreateCourse.xaml</DependentUpon>
     </Compile>

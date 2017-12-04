@@ -60,9 +60,13 @@
         
         <DatePicker HorizontalAlignment="Left" Margin="50,450,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Date].Enabled}" Visibility="{Binding ViewControlStates[Date].VisibilityState}" Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Tid" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <ComboBox HorizontalAlignment="Left" Margin="50,525,0,0" Width="550" Background="#66F0F0F0"
+        <TimePicker HorizontalAlignment="Left" Margin="50,525,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Time].Enabled}" Visibility="{Binding ViewControlStates[Time].VisibilityState}" Time="{Binding DetailsViewModel.Time, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <ComboBox HorizontalAlignment="Left" Margin="50,600,0,0" Width="550" Background="#66F0F0F0"
             IsEnabled="{Binding ViewControlStates[Teacher].Enabled}"
             Visibility="{Binding ViewControlStates[Teacher].VisibilityState}"
             ItemsSource="{Binding DetailsViewModel.CollectionTeacher}" 

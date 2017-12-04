@@ -11,15 +11,15 @@
 
         <!--Navigation Buttons-->
 
-        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" Click="_CourseButton__Click"/>
+        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" BorderBrush="Gray" BorderThickness="5" Click="_CourseButton__Click"/>
 
-        <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="515,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" Click="_TeacherButton__Click"/>
+        <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="515,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" BorderBrush="Gray" BorderThickness="5" Click="_TeacherButton__Click"/>
 
-        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="980,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40"/>
+        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="980,25,0,0" VerticalAlignment="Top" Width="250" BorderBrush="Gray" BorderThickness="5" FontSize="40"/>
 
         <!--List View-->
 
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0"/>
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" BorderBrush="Gray" BorderThickness="5"/>
 
         <!--Titles-->
 
@@ -55,7 +55,7 @@
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" IsChecked="True"/>
 
         <RadioButton Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top"/>
 

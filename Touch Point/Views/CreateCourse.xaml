@@ -92,13 +92,11 @@
 
         <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Rediger" Margin="150,650,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Gem" Margin="250,650,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Slet" Margin="350,650,0,0" VerticalAlignment="Top"/>
-
-        <RadioButton Content="Vis Faktura" Margin="450,650,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Slet" Margin="500,650,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

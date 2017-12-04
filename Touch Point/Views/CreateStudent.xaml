@@ -27,31 +27,43 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="690,150,0,0" Text="List View" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
 
-        <!--Text Boxes to fill out information-->
+        <!--Text Bloks With Text Boxes to fill out information-->
 
-        <TextBox HorizontalAlignment="Left" Margin="50,210,0,0" Text="Kursist ID" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" Text="Kursist ID" VerticalAlignment="Top" FontWeight="Bold"/>
+        
+        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" Text="Kursist ID" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,260,0,0" Text="Navn" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,275,0,0" Text="Navn" VerticalAlignment="Top" FontWeight="Bold"/>
+        
+        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0" Text="Navn" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,310,0,0" Text="CPR nummer" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" Text="CPR-Nr." VerticalAlignment="Top" FontWeight="Bold"/>
+        
+        <TextBox HorizontalAlignment="Left" Margin="50,375,0,0" Text="CPR nummer" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,425,0,0" Text="Adresse" VerticalAlignment="Top" FontWeight="Bold"/>
+        
+        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" Text="Adresse" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,360,0,0" Text="Adresse" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Telefon Nr." VerticalAlignment="Top" FontWeight="Bold"/>
+        
+        <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" Text="Phone" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,410,0,0" Text="Phone" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="E-Mail" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,460,0,0" Text="E-mail" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" Text="E-mail" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <RadioButton Content="Opret Ny" Margin="50,550,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Rediger" Margin="150,550,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Rediger" Margin="150,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Gem" Margin="50,600,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Gem" Margin="250,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Slet" Margin="150,600,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Slet" Margin="350,650,0,0" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Vis Faktura" Margin="50,650,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Vis Faktura" Margin="450,650,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

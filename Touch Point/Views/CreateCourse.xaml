@@ -35,7 +35,6 @@
 
         <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" ItemsSource="{Binding Courses , Mode=TwoWay}" SelectedItem="{Binding SelectedCourse, Mode=TwoWay}" BorderBrush="Gray" BorderThickness="5"/>
 
-
         <!--Titles-->
 
         <TextBlock  HorizontalAlignment="Left" Margin="50,150,0,0" Text="Details" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>

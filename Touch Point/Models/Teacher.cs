@@ -26,10 +26,9 @@ namespace Touch_Point
             _phone = phone;
             _email = email;
         }
-        public ICommand DeletionCommand
-        {
-            get { return new RelayCommand(this); }
-        }
+
+        
+
 
         public int TeacherID
         {

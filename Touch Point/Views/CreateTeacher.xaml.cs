@@ -35,5 +35,10 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(CreateStudent));
         }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

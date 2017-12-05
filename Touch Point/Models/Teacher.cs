@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Touch_Point.Models;
 
 namespace Touch_Point
 {
@@ -23,6 +25,10 @@ namespace Touch_Point
             _address = address;
             _phone = phone;
             _email = email;
+        }
+        public ICommand DeletionCommand
+        {
+            get { return new RelayCommand(this); }
         }
 
         public int TeacherID

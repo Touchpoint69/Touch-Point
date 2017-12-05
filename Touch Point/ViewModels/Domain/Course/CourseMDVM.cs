@@ -14,8 +14,8 @@ namespace Touch_Point.ViewModels.Domain.Course
         public CourseMDVM()
         {
             Courses = new ObservableCollection<Touch_Point.Course>();
-            Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi", 12 / 12 / 12, "Jørgen");
-            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja", 12 / 12 / 12, "Bolette");
+            Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi",1, 12 / 12 / 12, "Jørgen");
+            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja",1, 12 / 12 / 12, "Bolette");
             Courses.Add(C1);
             Courses.Add(C2);
         }

@@ -6,11 +6,13 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Touch_Point.Annotations;
+using Touch_Point.Models;
 
 namespace Touch_Point.ViewModels.Domain.Teacher
 {
-    public class TeacherMDVM : INotifyPropertyChanged
+    public class TeacherMDVM : INotifyPropertyChanged 
     {
         public TeacherMDVM()
         {
@@ -20,6 +22,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             TeacherList.Add(T1);
             TeacherList.Add(T2);
         }
+
         private ObservableCollection<Touch_Point.Teacher> _TeacherList;
         private Touch_Point.Teacher _selectedTeacher;
 
@@ -27,6 +30,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
         {
             get { return _TeacherList; }
             set { _TeacherList = value; }
+
 
         }
 
@@ -39,12 +43,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
                 OnPropertyChanged();
             }
         }
-        //        private ObservableCollection<Touch_Point.Teacher> _teachers;
-        //        public ObservableCollection<Touch_Point.Teacher> Teachers
-        //        {
-        //            get { return _teachers; }
-        //            
-        //        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

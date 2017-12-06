@@ -2,11 +2,14 @@
     x:Class="Touch_Point.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Touch_Point"
+    xmlns:local="using:Touch_Point.ViewModels."
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:course="using:Touch_Point.ViewModels.Domain.Course"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <course:CourseMDVM/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         
         <Button x:Name="_AdminButton_" Content="Admin" HorizontalAlignment="Left" Height="70" Margin="1200,25,0,0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="5" Click="_AdminButton__Click"/>

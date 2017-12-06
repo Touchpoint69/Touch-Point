@@ -27,7 +27,6 @@ namespace Touch_Point
             this.InitializeComponent();
         }
 
-
         private void _AdminButton__Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Views.Admin));

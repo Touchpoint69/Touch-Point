@@ -101,7 +101,7 @@
 
         <Button Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <Button Content="Slet" Margin="500,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+        <Button Content="Slet" Command="{Binding DeletionCommand}" Margin="500,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
     </Grid>
 </Page>

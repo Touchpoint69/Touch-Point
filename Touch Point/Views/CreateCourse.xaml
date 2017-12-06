@@ -45,11 +45,11 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" Text="Kursus ID" VerticalAlignment="Top" FontWeight="Bold"/>
         
-        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus ID" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0" TextChanged="TextBox_TextChanged_1"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,275,0,0" Text="Kursus Navn" VerticalAlignment="Top" FontWeight="Bold"/>
         
-        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0" PlaceholderText="Kursus Navn" Text="{Binding SelectedCourse.Name}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0" PlaceholderText="Kursus Navn" Text="{Binding SelectedCourse.Name}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0" TextChanged="TextBox_TextChanged_1"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" Text="Lokale" VerticalAlignment="Top" FontWeight="Bold"/>
         
@@ -89,7 +89,7 @@
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" IsChecked="True" />
+        <RadioButton Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" IsChecked="True" Checked="RadioButton_Checked" />
 
         <RadioButton Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top"/>
 

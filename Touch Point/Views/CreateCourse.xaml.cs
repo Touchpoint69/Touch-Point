@@ -46,5 +46,7 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
+        
+        
     }
 }

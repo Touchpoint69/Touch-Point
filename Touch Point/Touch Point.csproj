@@ -112,6 +112,9 @@
     <Compile Include="ViewModels\Base\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Course\CourseMDVM.cs" />
     <Compile Include="ViewModels\Domain\Teacher\TeacherMDVM.cs" />
+    <Compile Include="Views\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateCourse.xaml.cs">
       <DependentUpon>CreateCourse.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,9 @@
     <None Include="Touch Point_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Hassan Gay.jpg" />
+    <Content Include="Assets\House-Icon.png" />
+    <Content Include="Assets\TouchPoint Logo.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -146,6 +152,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CreateCourse.xaml">
       <SubType>Designer</SubType>

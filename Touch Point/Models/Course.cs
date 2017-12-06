@@ -20,13 +20,12 @@ namespace Touch_Point
         string _teacher;
 
 
-        public Course(int courseID,string name,int room,int sampletid ,DateTime time, string teacher)
+        public Course(int courseID,string name,int room,DateTime time, string teacher)
         {//Contructor for et Course objekt
             _time = time;
             _courseID = courseID;
             _name = name;
             _room = room;
-            //Sampletid skal erstattes af datetime
             _teacher = teacher; // teacher skal være objektet teacher ikke en string
         }
 

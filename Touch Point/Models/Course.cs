@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,13 @@ namespace Touch_Point
         int _courseID;
         string _name;
         int _room;
-        //DateTimeOffset _time;
+        DateTime _time;
         string _teacher;
 
 
-        public Course(int courseID,string name,int room,int sampletid , string teacher)
+        public Course(int courseID,string name,int room,int sampletid ,DateTime time, string teacher)
         {//Contructor for et Course objekt
-            //DateTimeOffset _time
+            _time = time;
             _courseID = courseID;
             _name = name;
             _room = room;
@@ -61,5 +62,6 @@ namespace Touch_Point
         {
             return "This is a " + _name + " Kursus Afholdt af " + _teacher;
         }
+        
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Touch_Point.Models;
 
 namespace Touch_Point
 {
@@ -24,6 +26,9 @@ namespace Touch_Point
             _phone = phone;
             _email = email;
         }
+
+        
+
 
         public int TeacherID
         {

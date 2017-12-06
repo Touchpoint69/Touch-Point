@@ -20,30 +20,16 @@ namespace Touch_Point.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateTeacher : Page
+    public sealed partial class Admin : Page
     {
-        public CreateTeacher()
+        public Admin()
         {
             this.InitializeComponent();
         }
 
-        private void _CourseButton__Click(object sender, RoutedEventArgs e)
+        private void _Log_InButton__Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CreateCourse));
-        }
-        private void _StudentButton__Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(CreateStudent));
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void _AdminButton__Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(Views.CreateCourse));
         }
     }
 }

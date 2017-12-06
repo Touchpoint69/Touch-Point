@@ -6,18 +6,29 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Touch_Point.Models;
 
 namespace Touch_Point.ViewModels.Domain.Course
 {
     public class CourseMDVM : INotifyPropertyChanged
-    {//Creater nye objekter i systemet
+    {
+        private RelayCommand _deletionCommand;
+        //Creater nye objekter i systemet
         public CourseMDVM()
         {
             Courses = new ObservableCollection<Touch_Point.Course>();
-            Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi", 12 / 12 / 12, "Jørgen");
-            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja", 12 / 12 / 12, "Bolette");
+            Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi",1, 12 / 12 / 12, "Jørgen");
+            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja",1, 12 / 12 / 12, "Bolette");
             Courses.Add(C1);
             Courses.Add(C2);
+
+            _deletionCommand = new RelayCommand(DeleteCourse, () => _selectedCourse != null);
+        }
+
+        public ICommand DeletionCommand
+        {
+            get { return _deletionCommand; }
         }
         //Det virkede ikke ude disse
         private ObservableCollection<Touch_Point.Course> _courses;
@@ -39,6 +50,18 @@ namespace Touch_Point.ViewModels.Domain.Course
             {
                 _selectedCourse = value;
                 OnPropertyChanged();
+                _deletionCommand.RaiseCanExecuteChanged();
+            }
+        }
+        private void DeleteCourse()
+        {
+            for (int i = 0; i < Courses.Count; i++)
+            {
+                if (Courses[i].CourseId == _selectedCourse.CourseId)
+                {
+                    Courses.RemoveAt(i);
+                    return;
+                }
             }
         }
         //Metode til property changed

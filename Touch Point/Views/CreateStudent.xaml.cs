@@ -36,5 +36,10 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(CreateTeacher));
         }
+
+        private void _AdminButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

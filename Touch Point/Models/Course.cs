@@ -62,5 +62,6 @@ namespace Touch_Point
         {
             return "This is a " + _name + " Kursus Afholdt af " + _teacher;
         }
+        
     }
 }

@@ -28,9 +28,9 @@ namespace Touch_Point
         }
 
 
-        private void _MainPageButton__Click(object sender, RoutedEventArgs e)
+        private void _AdminButton__Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Views.CreateCourse));
+            Frame.Navigate(typeof(Views.Admin));
         }
     }
 }

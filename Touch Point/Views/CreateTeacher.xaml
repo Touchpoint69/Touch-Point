@@ -56,13 +56,13 @@
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <Button Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top"/>
+        <Button Content="Opret Ny" Command="{Binding }" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <RadioButton Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top"/>
+        <Button Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <RadioButton Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top"/>
+        <Button Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <Button Content="Slet" Command="{Binding DeletionCommand}" Margin="500,650,0,0" VerticalAlignment="Top"/>
+        <Button Content="Slet" Command="{Binding SelectedTeacher.DeletionCommand}" Margin="500,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
     </Grid>
 </Page>

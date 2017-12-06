@@ -32,5 +32,15 @@ namespace Touch_Point
         {
             Frame.Navigate(typeof(Views.CreateCourse));
         }
+
+        private void _TeacherButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Views.CreateTeacher));
+        }
+
+        private void _StudentButton__Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Views.CreateStudent));
+        }
     }
 }

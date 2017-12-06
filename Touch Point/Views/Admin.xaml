@@ -7,10 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/TouchPoint Logo.jpg" Stretch="Fill"/>
-        </Grid.Background>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Logo-->
+        
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="ms-appx:///Assets/TouchPoint Logo.jpg" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!--Log in type of shit-->
+        
         <TextBlock HorizontalAlignment="Center" Margin="0,200,0,0" Text="Bruger Navn" VerticalAlignment="Top" FontWeight="Bold"/>
 
         <TextBox HorizontalAlignment="Center" Margin="0,225,0,0" PlaceholderText="Bruger Navn" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>

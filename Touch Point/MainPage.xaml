@@ -5,9 +5,22 @@
     xmlns:local="using:Touch_Point"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:course="using:Touch_Point.ViewModels.Domain.Course"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <course:CourseMDVM/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Logo-->
+        
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Assets/TouchPoint Logo.jpg" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!--Navigation Buttons-->
         
         <Button x:Name="_AdminButton_" Content="Admin" HorizontalAlignment="Left" Height="70" Margin="1200,25,0,0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="5" Click="_AdminButton__Click"/>
 
@@ -37,14 +50,14 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,425,0,0" Text="Dato" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.Room}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Tid" VerticalAlignment="Top" FontWeight="Bold"/>
 
         <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
-        
+
         <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
@@ -52,6 +65,6 @@
         <Button Content="Tildmeld" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Afmeld" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
-
+        
     </Grid>
 </Page>

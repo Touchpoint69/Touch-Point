@@ -21,8 +21,15 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
 
+        <!--Logo-->
+        
+        <Rectangle Height="150" Margin="690,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="580">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="ms-appx:///Assets/TouchPoint Logo.jpg" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        
         <!--Navigation Buttons-->
 
         <Button x:Name="_FrontPage_" Height="50" Width="50" Margin="0,0,0,0" VerticalAlignment="Top" Click="_AdminButton__Click">
@@ -31,11 +38,11 @@
             </Button.Background>
         </Button>
         
-        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" BorderBrush="Gray" BorderThickness="5"/>
+        <Button x:Name="_CourseButton_" Content="Kurser" HorizontalAlignment="Left" Height="100" Margin="50,25,0,0" VerticalAlignment="Top" Width="200" FontSize="25" BorderBrush="Gray" BorderThickness="5"/>
 
-        <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="515,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" BorderBrush="Gray" BorderThickness="5" Click="_TeacherButton__Click"/>
+        <Button x:Name="_TeacherButton_" Content="Underviser" HorizontalAlignment="Left" Height="100" Margin="250,25,0,0" VerticalAlignment="Top" Width="200" FontSize="25" BorderBrush="Gray" BorderThickness="5" Click="_TeacherButton__Click"/>
 
-        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="980,25,0,0" VerticalAlignment="Top" Width="250" FontSize="40" BorderBrush="Gray" BorderThickness="5" Click="_StudentButton__Click"/>
+        <Button x:Name="_StudentButton_" Content="Kursist" HorizontalAlignment="Left" Height="100" Margin="450,25,0,0" VerticalAlignment="Top" Width="200" FontSize="25" BorderBrush="Gray" BorderThickness="5" Click="_StudentButton__Click"/>
 
         <!--List View-->
 
@@ -102,6 +109,8 @@
         <Button Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5" Click="Button_Click_1"/>
 
         <Button Content="Slet" Command="{Binding DeletionCommand}" Margin="500,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+
+
 
     </Grid>
 </Page>

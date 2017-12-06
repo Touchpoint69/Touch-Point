@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Touch_Point.Annotations;
 using Touch_Point.Models;
+using Touch_Point.Views;
 
 namespace Touch_Point.ViewModels.Domain.Teacher
 {
@@ -25,7 +26,9 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             TeacherList.Add(T2);
 
             _deletionCommand = new RelayCommand(DeleteTeacher, () => _selectedTeacher != null);
+
         }
+
 
         private ObservableCollection<Touch_Point.Teacher> _TeacherList;
         private Touch_Point.Teacher _selectedTeacher;
@@ -41,6 +44,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
 
         }
 
+        
         public Touch_Point.Teacher SelectedTeacher
         {
             get { return _selectedTeacher; }
@@ -52,6 +56,13 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             }
         }
 
+        
+
+        //public Touch_Point.Teacher EditTeacher
+        //{
+        //    get { return _selectedTeacher; }
+        //    set { _selectedTeacher = value; OnPropertyChanged(); }
+        //}
         private void DeleteTeacher()
         {
             for (int i = 0; i < TeacherList.Count; i++)
@@ -63,11 +74,6 @@ namespace Touch_Point.ViewModels.Domain.Teacher
                 }
             }
         }
-
-        //public bool DoDelete()
-        //{
-        //    return (SelectedTeacher != null && Delete(SelectedTeacher.TeacherID));
-        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 

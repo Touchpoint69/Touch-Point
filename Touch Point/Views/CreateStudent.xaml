@@ -36,7 +36,7 @@
 
         <!--List View-->
 
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" BorderBrush="Gray" BorderThickness="5" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding StudentList, Mode=TwoWay}" SelectedItem="{Binding SelectedStudent, Mode=TwoWay}"/>
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" BorderBrush="Gray" BorderThickness="5" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding Students, Mode=TwoWay}" SelectedItem="{Binding SelectedStudent, Mode=TwoWay}"/>
 
         <!--Titles-->
 

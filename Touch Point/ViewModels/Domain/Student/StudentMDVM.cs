@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Touch_Point.Models;
-using Touch_Point.Annotations;
-using Windows.UI.Xaml.Controls;
-using Windows.ApplicationModel.UserDataTasks.DataProvider;
 
 namespace Touch_Point.ViewModels.Domain.Student
 {

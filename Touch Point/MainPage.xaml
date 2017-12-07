@@ -11,6 +11,16 @@
         <course:CourseMDVM/>
     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Logo-->
+        
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Assets/TouchPoint Logo.jpg" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!--Navigation Buttons-->
         
         <Button x:Name="_AdminButton_" Content="Admin" HorizontalAlignment="Left" Height="70" Margin="1200,25,0,0" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="5" Click="_AdminButton__Click"/>
 
@@ -47,7 +57,7 @@
         <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
-        
+
         <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
@@ -55,6 +65,6 @@
         <Button Content="Tildmeld" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Afmeld" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
-
+        
     </Grid>
 </Page>

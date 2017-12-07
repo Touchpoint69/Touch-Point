@@ -27,9 +27,6 @@ namespace Touch_Point
             _email = email;
         }
 
-        
-
-
         public int TeacherID
         {
             get{return _teacherID;}

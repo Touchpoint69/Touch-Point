@@ -37,6 +37,7 @@ namespace Touch_Point
         public int CourseId
         {
             get { return _courseID; }
+            set { _courseID = value; }
         }
 
         public string Name

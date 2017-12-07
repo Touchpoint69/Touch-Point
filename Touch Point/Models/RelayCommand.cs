@@ -14,6 +14,7 @@ namespace Touch_Point.Models
         private readonly Func<bool> _canExecute;
         private Teacher teacher;
         private Course course;
+        private Student student;
 
         public event EventHandler CanExecuteChanged;
 

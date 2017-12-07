@@ -29,7 +29,6 @@ namespace Touch_Point.ViewModels.Domain.Teacher
 
         }
 
-
         private ObservableCollection<Touch_Point.Teacher> _TeacherList;
         private Touch_Point.Teacher _selectedTeacher;
         public ICommand DeletionCommand
@@ -40,10 +39,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
         {
             get { return _TeacherList; }
             set { _TeacherList = value; }
-         
-
         }
-
         
         public Touch_Point.Teacher SelectedTeacher
         {
@@ -55,8 +51,6 @@ namespace Touch_Point.ViewModels.Domain.Teacher
                 _deletionCommand.RaiseCanExecuteChanged();
             }
         }
-
-        
 
         //public Touch_Point.Teacher EditTeacher
         //{

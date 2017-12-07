@@ -45,5 +45,10 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,7 @@
     <Page.DataContext>
         <local:TeacherMDVM/>
     </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <!--Logo-->
@@ -35,7 +36,7 @@
 
         <!--List View-->
 
-        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" ItemsSource="{Binding TeacherList, Mode=TwoWay}" SelectedItem="{Binding SelectedTeacher, Mode=TwoWay}" BorderBrush="Gray" BorderThickness="5"/>
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" BorderBrush="Gray" BorderThickness="5" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding TeacherList, Mode=TwoWay}" SelectedItem="{Binding SelectedTeacher, Mode=TwoWay}"/>
 
         <!--Titles-->
 

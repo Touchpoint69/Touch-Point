@@ -21,28 +21,27 @@ namespace Touch_Point.ViewModels.Domain.Student
         public StudentMDVM()
         {
             Students = new ObservableCollection<Touch_Point.Student>();
-            Touch_Point.Student S1 = new Touch_Point.Student(1, "Mohammed", 0103782037, "Mestervej 4, holbæk", 33564784, "Thelord@hotmail.com");
-            Touch_Point.Student S2 = new Touch_Point.Student(1,"Mohammed",0103782037,"Mestervej 4, holbæk",33564784,"Thelord@hotmail.com");
+            Touch_Point.Student S1 = new Touch_Point.Student(1, "Nick Gur", 69696969, "Slavevej 420, Vice City", 13371337, "YoMomma@hotmail.com");
+            Touch_Point.Student S2 = new Touch_Point.Student(2, "Per Kjær", 42091169, "Bøssevej 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
             Students.Add(S1);
             Students.Add(S2);
 
             _deletionCommand = new RelayCommand(DeleteStudent, () => _selectedStudent != null);
         }
 
+        //Skal være der
+        private ObservableCollection<Touch_Point.Student> _students;
+        private Touch_Point.Student _selectedStudent;
         public ICommand DeletionCommand
         {
             get { return _deletionCommand; }
         }
-        //Det virkede ikke ude disse
-        private ObservableCollection<Touch_Point.Student> _students;
-        private Touch_Point.Student _selectedStudent;
 
         //Contructor for en lister af Students
         public ObservableCollection<Touch_Point.Student> Students
         {
             get { return _students; }
             set { _students = value; }
-
         }
 
         //Metode til at vælge elementer i listen
@@ -70,6 +69,7 @@ namespace Touch_Point.ViewModels.Domain.Student
         //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;
 
+        //[NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

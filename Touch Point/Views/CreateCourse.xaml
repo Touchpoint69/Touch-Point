@@ -58,7 +58,7 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" Text="Kursus ID" VerticalAlignment="Top" FontWeight="Bold"/>
         
-        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,275,0,0" Text="Kursus Navn" VerticalAlignment="Top" FontWeight="Bold"/>
         
@@ -102,15 +102,13 @@
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <Button Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5" Click="Button_Click"/>
+        <Button Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Rediger" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <Button Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5" Click="Button_Click_1"/>
+        <Button Content="Gem" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Slet" Command="{Binding DeletionCommand}" Margin="500,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
-
-
 
     </Grid>
 </Page>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Touch_Point
 {
-    class Student
+    public class Student
     {
         int _studentID;
         string _name;
@@ -24,7 +24,42 @@ namespace Touch_Point
             _phone = phone;
             _email = email;
         }
-        Student aStudent = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");
 
+        public int StudentID
+        {
+            get { return _studentID; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+        }
+
+        public int SSN
+        {
+            get { return _SSN; }
+        }
+
+        public string Address
+        {
+            get { return _address; }
+        }
+
+        public int Phone
+        {
+            get { return _phone; }
+        }
+
+        public string Email
+        {
+            get { return _email; }
+        }
+
+        public override string ToString()
+        {
+            return _name + " ID Nummer " + _studentID + "   Telefon: " + _phone;
+        }
+
+        //Student aStudent = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");
     }
 }

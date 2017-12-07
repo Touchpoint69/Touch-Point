@@ -112,6 +112,7 @@
     <Compile Include="ViewModels\Base\MasterViewModel.cs" />
     <Compile Include="ViewModels\Base\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Course\CourseMDVM.cs" />
+    <Compile Include="ViewModels\Domain\Student\StudentMDVM.cs" />
     <Compile Include="ViewModels\Domain\Teacher\TeacherMDVM.cs" />
     <Compile Include="Views\Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
@@ -214,9 +215,7 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\Domain\Student\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -7,7 +7,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
+using Touch_Point.Annotations;
 using Touch_Point.Models;
+using Touch_Point.Views;
 
 namespace Touch_Point.ViewModels.Domain.Student
 {
@@ -18,8 +21,8 @@ namespace Touch_Point.ViewModels.Domain.Student
         public StudentMDVM()
         {
             Students = new ObservableCollection<Touch_Point.Student>();
-            Touch_Point.Student S1 = new Touch_Point.Student(1, "Nick Gur", 69696969, "Slavevej 420, Vice City", 13371337, "YoMomma@hotmail.com");
-            Touch_Point.Student S2 = new Touch_Point.Student(2, "Per Kjær", 42091169, "Bøssevej 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
+            Touch_Point.Student S1 = new Touch_Point.Student(360, "Nick Gur", 69696969, "Slavevej 420, Vice City", 13371337, "YoMomma@hotmail.com");
+            Touch_Point.Student S2 = new Touch_Point.Student(69, "Per Kjær", 42091169, "Bøssevej 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
             Students.Add(S1);
             Students.Add(S2);
 
@@ -66,7 +69,7 @@ namespace Touch_Point.ViewModels.Domain.Student
         //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //[NotifyPropertyChangedInvocator]
+        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

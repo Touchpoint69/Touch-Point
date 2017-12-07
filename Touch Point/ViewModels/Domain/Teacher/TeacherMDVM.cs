@@ -26,7 +26,6 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             TeacherList.Add(T2);
 
             _deletionCommand = new RelayCommand(DeleteTeacher, () => _selectedTeacher != null);
-
         }
 
         private ObservableCollection<Touch_Point.Teacher> _TeacherList;

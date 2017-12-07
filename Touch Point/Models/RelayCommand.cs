@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Touch_Point.ViewModels.Domain.Teacher;
+using Touch_Point.ViewModels.Domain.Student;
+using Touch_Point.ViewModels.Domain.Course;
 
 namespace Touch_Point.Models
 {
@@ -29,6 +31,10 @@ namespace Touch_Point.Models
             this.teacher = teacher;
         }
 
+        public RelayCommand(Student student)
+        {
+            this.student = student;
+        }
         public bool CanExecute(object parameter)
         {
             return ((_canExecute == null) || _canExecute());
@@ -40,13 +46,9 @@ namespace Touch_Point.Models
             
         }
         
-
         public void RaiseCanExecuteChanged()
         {
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
-
     }
-
-    
 }

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
+    <!--<Page.Resources>
         <Style x:Key="TextBlockInSubComboStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -15,7 +15,7 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-    </Page.Resources>
+    </Page.Resources>-->
     <Page.DataContext>
         <local:CourseMDVM/>
     </Page.DataContext>
@@ -78,8 +78,8 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <ComboBox HorizontalAlignment="Left" Margin="50,600,0,0" Width="550" Background="#66F0F0F0"
-            IsEnabled="{Binding ViewControlStates[Teacher].Enabled}"
+        <ComboBox HorizontalAlignment="Left" Margin="50,600,0,0" Width="550" Background="#66F0F0F0"/>
+        <!--IsEnabled="{Binding ViewControlStates[Teacher].Enabled}"
             Visibility="{Binding ViewControlStates[Teacher].VisibilityState}"
             ItemsSource="{Binding DetailsViewModel.CollectionTeacher}" 
             SelectedItem="{Binding DetailsViewModel.SelectedTeacher, Mode=TwoWay}">
@@ -89,7 +89,7 @@
 
                     <StackPanel Orientation="Horizontal">
 
-                        <!--<Image Source="{Binding ImageSource}" Height="60" Width="60" />-->
+                        --><!--<Image Source="{Binding ImageSource}" Height="60" Width="60" />--><!--
                         <TextBlock Style="{StaticResource TextBlockInSubComboStyle}" 
                             Text="{Binding Description}" />
                     </StackPanel>
@@ -98,7 +98,7 @@
 
             </ComboBox.ItemTemplate>
 
-        </ComboBox>
+        </ComboBox>-->
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 

@@ -17,31 +17,39 @@ namespace Touch_Point.ViewModels.Domain.Student
     public class StudentMDVM : INotifyPropertyChanged
     {
         private RelayCommand _deletionCommand;
+        private RelayCommand _updateCommand;
+
         //Creater nye objekter i systemet
         public StudentMDVM()
         {
-            Students = new ObservableCollection<Touch_Point.Student>();
-            Touch_Point.Student S1 = new Touch_Point.Student(360, "Nick Gur", 69696969, "Slavevej 420, Vice City", 13371337, "YoMomma@hotmail.com");
-            Touch_Point.Student S2 = new Touch_Point.Student(69, "Per Kjær", 42091169, "Bøssevej 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
-            Students.Add(S1);
-            Students.Add(S2);
+            _studentCatalog = new StudentCatalog();
+            Touch_Point.Student S1 = new Touch_Point.Student(360, "Steven Jobs", 69696969, "MyPhone HQ 420, Vice City", 13371337, "YoMomma@hotmail.com");
+            Touch_Point.Student S2 = new Touch_Point.Student(69, "Will Gates", 42091169, "NanoSoft HQ 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
+            _studentCatalog.Create(S1);
+            _studentCatalog.Create(S2);
 
             _deletionCommand = new RelayCommand(DeleteStudent, () => _selectedStudent != null);
+            _updateCommand = new RelayCommand(UpdateStudent, () => _selectedStudent != null);
+
         }
 
         //Skal være der
-        private ObservableCollection<Touch_Point.Student> _students;
+        private StudentCatalog _studentCatalog;
         private Touch_Point.Student _selectedStudent;
         public ICommand DeletionCommand
         {
             get { return _deletionCommand; }
         }
 
+        public ICommand UpdateCommand
+        {
+            get { return _updateCommand; }
+        }
+
         //Contructor for en lister af Students
         public ObservableCollection<Touch_Point.Student> Students
         {
-            get { return _students; }
-            set { _students = value; }
+            get { return _studentCatalog.Data; }
         }
 
         //Metode til at vælge elementer i listen
@@ -53,19 +61,54 @@ namespace Touch_Point.ViewModels.Domain.Student
                 _selectedStudent = value;
                 OnPropertyChanged();
                 _deletionCommand.RaiseCanExecuteChanged();
-            }
-        }
-        private void DeleteStudent()
-        {
-            for (int i = 0; i < Students.Count; i++)
-            {
-                if (Students[i].StudentID == _selectedStudent.StudentID)
+                _updateCommand.RaiseCanExecuteChanged();
+
+                if (_selectedStudent != null)
                 {
-                    Students.RemoveAt(i);
-                    return;
+                    StudentID = _selectedStudent.StudentID;
+                    Name = _selectedStudent.Name;
+                    SSN = _selectedStudent.SSN;
+                    Address = _selectedStudent.Address;
+                    Phone = _selectedStudent.Phone;
+                    Email = _selectedStudent.Email;
+
+                    OnPropertyChanged(nameof(StudentID));
+                    OnPropertyChanged(nameof(Name));
+                    OnPropertyChanged(nameof(SSN));
+                    OnPropertyChanged(nameof(Address));
+                    OnPropertyChanged(nameof(Phone));
+                    OnPropertyChanged(nameof(Email));
                 }
             }
         }
+
+        public int StudentID { get; set; }
+
+        public string Name { get; set; }
+
+        public int SSN { get; set; }
+
+        public string Address { get; set; }
+
+        public int Phone { get; set; }
+
+        public string Email{ get; set; }
+
+
+        private void DeleteStudent()
+        {
+            _studentCatalog.Delete(_selectedStudent.StudentID);
+            OnPropertyChanged(nameof(Students));
+        }
+
+        private void UpdateStudent()
+        {
+            DeleteStudent();
+            _studentCatalog.Create(new Touch_Point.Student(StudentID, Name, SSN, Address, Phone, Email));
+            OnPropertyChanged(nameof(Students));
+        }
+
+
         //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;
 

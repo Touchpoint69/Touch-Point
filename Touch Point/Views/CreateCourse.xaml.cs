@@ -39,6 +39,12 @@ namespace Touch_Point.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            {
+                ComboBoxItem item = (ComboBoxItem)e.AddedItems[0];
+
+                string selected = (string)item.Content;
+
+            }
 
         }
 
@@ -46,7 +52,6 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
-        
-        
+
     }
 }

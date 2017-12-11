@@ -29,6 +29,4 @@ namespace Touch_Point.Models
     //public event EventHandler CanExecuteChanged;
     //}
 
-    
-
 }

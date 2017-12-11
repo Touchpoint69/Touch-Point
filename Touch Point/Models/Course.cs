@@ -19,7 +19,7 @@ namespace Touch_Point
         DateTime _time;
         string _teacher;
 
-        public Course(int courseID,string name,int room,int sampletid ,DateTime time, string teacher)
+        public Course(int courseID,string name,int room,DateTime time, string teacher)
         {//Contructor for et Course objekt
             _courseID = courseID;
             _name = name;

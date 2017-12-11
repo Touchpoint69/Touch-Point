@@ -28,31 +28,37 @@ namespace Touch_Point
         public int StudentID
         {
             get { return _studentID; }
+            set { _studentID = value; }
         }
 
         public string Name
         {
             get { return _name; }
+            set { _name = value; }
         }
 
         public int SSN
         {
             get { return _SSN; }
+            set { _SSN = value; }
         }
 
         public string Address
         {
             get { return _address; }
+            set { _address = value; }
         }
 
         public int Phone
         {
             get { return _phone; }
+            set { _phone = value; }
         }
 
         public string Email
         {
             get { return _email; }
+            set { _email = value; }
         }
 
         public override string ToString()

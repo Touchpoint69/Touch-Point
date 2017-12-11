@@ -18,6 +18,7 @@ namespace Touch_Point.ViewModels.Domain.Student
     {
         private RelayCommand _deletionCommand;
         private RelayCommand _updateCommand;
+        private RelayCommand _createCommand;
 
         //Creater nye objekter i systemet
         public StudentMDVM()
@@ -30,7 +31,7 @@ namespace Touch_Point.ViewModels.Domain.Student
 
             _deletionCommand = new RelayCommand(DeleteStudent, () => _selectedStudent != null);
             _updateCommand = new RelayCommand(UpdateStudent, () => _selectedStudent != null);
-
+            _createCommand = new RelayCommand(CreateStudent, () => _selectedStudent != null);
         }
 
         //Skal være der
@@ -44,6 +45,11 @@ namespace Touch_Point.ViewModels.Domain.Student
         public ICommand UpdateCommand
         {
             get { return _updateCommand; }
+        }
+
+        public ICommand CreateCommand
+        {
+            get { return _createCommand; }
         }
 
         //Contructor for en lister af Students
@@ -62,6 +68,7 @@ namespace Touch_Point.ViewModels.Domain.Student
                 OnPropertyChanged();
                 _deletionCommand.RaiseCanExecuteChanged();
                 _updateCommand.RaiseCanExecuteChanged();
+                _createCommand.RaiseCanExecuteChanged();
 
                 if (_selectedStudent != null)
                 {
@@ -108,6 +115,11 @@ namespace Touch_Point.ViewModels.Domain.Student
             OnPropertyChanged(nameof(Students));
         }
 
+        private void CreateStudent()
+        {
+            _studentCatalog.Create(new Touch_Point.Student(StudentID, Name, SSN, Address, Phone, Email));
+            OnPropertyChanged(nameof(Students));
+        }
 
         //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;

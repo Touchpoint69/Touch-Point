@@ -73,7 +73,7 @@
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <Button Content="Opret Ny" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+        <Button Content="Opret Ny" Command="{Binding CreateCommand}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Rediger" Command="{Binding UpdateCommand}" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 

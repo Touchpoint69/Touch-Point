@@ -35,6 +35,12 @@ namespace Touch_Point.Models
         {
             this.student = student;
         }
+
+        public RelayCommand(Course course)
+        {
+            this.course = course;
+        }
+
         public bool CanExecute(object parameter)
         {
             return ((_canExecute == null) || _canExecute());
@@ -45,7 +51,7 @@ namespace Touch_Point.Models
             _execute();
             
         }
-        
+
         public void RaiseCanExecuteChanged()
         {
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);

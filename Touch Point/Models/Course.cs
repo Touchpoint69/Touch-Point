@@ -14,38 +14,44 @@ namespace Touch_Point
     {
         //Instance Fields
         int _courseID;
-        string _name;
-        int _room;
+        string _title;
+        int _location;
         DateTime _time;
         string _teacher;
 
-        public Course(int courseID,string name,int room,DateTime time, string teacher)
+        public Course(int courseID,string title,int location,DateTime time, string teacher)
         {//Contructor for et Course objekt
             _courseID = courseID;
-            _name = name;
-            _room = room;
+            _title = title;
+            _location = location;
             _time = time;
             //Sampletid skal erstattes af datetime
             _teacher = teacher; // teacher skal være objektet teacher ikke en string
         }
 
         //Properties Til at gøre instance fields settable for andre klasser
-        public int CourseId
+        public int CourseID
         {
             get { return _courseID; }
             set { _courseID = value; }
         }
 
-        public string Name
+        public string Title
         {
-            get { return _name; }
-            set { _name = value; }
+            get { return _title; }
+            set { _title = value; }
         }
 
-        public int Room
+        public int Location
         {
-            get { return _room; }
-            set { _room = value; }
+            get { return _location; }
+            set { _location = value; }
+        }
+
+        public DateTime Time
+        {
+            get { return _time; }
+            set { _time = value; }
         }
 
         public string Teacher
@@ -57,7 +63,7 @@ namespace Touch_Point
         //override metode så det ser godt ud i listen
         public override string ToString()
         {
-            return "This is a " + _name + " Kursus Afholdt af " + _teacher;
+            return "This is a " + _title + " Kursus Afholdt af " + _teacher;
         }
     }
 }

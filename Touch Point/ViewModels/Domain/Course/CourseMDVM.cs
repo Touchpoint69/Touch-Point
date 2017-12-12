@@ -30,7 +30,7 @@ namespace Touch_Point.ViewModels.Domain.Course
 
             _deletionCommand = new RelayCommand(DeleteCourse, () => _selectedCourse != null);
             _updateCommand = new RelayCommand(UpdateCourse, () => _selectedCourse != null);
-            _createCommand = new RelayCommand(CreateCourse, () => _selectedCourse != null);
+            _createCommand = new RelayCommand(CreateCourse, () => true);
         }
 
         //Det virkede ikke ude disse

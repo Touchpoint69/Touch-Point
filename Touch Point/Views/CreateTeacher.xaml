@@ -47,33 +47,33 @@
         <!--Text Bloks With Text Boxes to fill out information-->
         <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" Text="Underviser ID" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="ID" Text="{Binding SelectedTeacher.TeacherID}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="ID" Text="{Binding TeacherID, Mode= TwoWay}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,275,0,0" Text="Navn" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0"  PlaceholderText="Navn" Text="{Binding SelectedTeacher.Name}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0"  PlaceholderText="Navn" Text="{Binding Name, Mode= TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" Text="CPR-Nr." VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,375,0,0" PlaceholderText="CPR Nummer" Text="{Binding SelectedTeacher.SSN}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,375,0,0" PlaceholderText="CPR Nummer" Text="{Binding SSN, Mode= TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,425,0,0" Text="Adresse" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Adresse" Text="{Binding SelectedTeacher.Address}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Adresse" Text="{Binding Address, Mode= TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Telefon Nr." VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Telefon Nummer" Text="{Binding SelectedTeacher.Phone}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Telefon Nummer" Text="{Binding Phone, Mode= TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="E-Mail" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="E-Mail" Text="{Binding SelectedTeacher.Email}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="E-Mail" Text="{Binding Email, Mode= TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 
-        <Button Content="Opret Ny" Command="{Binding CreateSelection}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+        <Button Content="Opret Ny" Command="{Binding CreateCommand}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
-        <Button Content="Rediger" Command="{Binding EditTeacher}" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+        <Button Content="Rediger" Command="{Binding UpdateCommand}" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Gem" Command="{Binding}" Margin="350,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 

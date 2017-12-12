@@ -17,6 +17,8 @@ namespace Touch_Point.ViewModels.Domain.Teacher
     public class TeacherMDVM : INotifyPropertyChanged
     {
         private RelayCommand _deletionCommand;
+        private RelayCommand _updateCommand;
+        private RelayCommand _createCommand;
         public TeacherMDVM()
         {
             TeacherList = new ObservableCollection<Touch_Point.Teacher>();
@@ -26,6 +28,8 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             TeacherList.Add(T2);
 
             _deletionCommand = new RelayCommand(DeleteTeacher, () => _selectedTeacher != null);
+            _updateCommand = new RelayCommand(UpdateTeacher, () => _selectedTeacher != null);
+            _createCommand = new RelayCommand(CreateTeacher, () => true);
         }
 
         private ObservableCollection<Touch_Point.Teacher> _TeacherList;
@@ -33,6 +37,15 @@ namespace Touch_Point.ViewModels.Domain.Teacher
         public ICommand DeletionCommand
         {
             get { return _deletionCommand; }
+        }
+        public ICommand UpdateCommand
+        {
+            get { return _updateCommand; }
+        }
+
+        public ICommand CreateCommand
+        {
+            get { return _createCommand; }
         }
         public ObservableCollection<Touch_Point.Teacher> TeacherList
         {
@@ -48,26 +61,54 @@ namespace Touch_Point.ViewModels.Domain.Teacher
                 _selectedTeacher = value;
                 OnPropertyChanged();
                 _deletionCommand.RaiseCanExecuteChanged();
+                _updateCommand.RaiseCanExecuteChanged();
+                _createCommand.RaiseCanExecuteChanged();
+
+                if (_selectedTeacher != null)
+                {
+                    TeacherID = _selectedTeacher.TeacherID;
+                    Name = _selectedTeacher.Name;
+                    SSN = _selectedTeacher.SSN;
+                    Address = _selectedTeacher.Address;
+                    Phone = _selectedTeacher.Phone;
+                    Email = _selectedTeacher.Email;
+
+                    OnPropertyChanged(nameof(TeacherID));
+                    OnPropertyChanged(nameof(Name));
+                    OnPropertyChanged(nameof(SSN));
+                    OnPropertyChanged(nameof(Address));
+                    OnPropertyChanged(nameof(Phone));
+                    OnPropertyChanged(nameof(Email));
+                }
             }
         }
+        public int TeacherID { get; set; }
 
-        //public Touch_Point.Teacher EditTeacher
-        //{
-        //    get { return _selectedTeacher; }
-        //    set { _selectedTeacher = value; OnPropertyChanged(); }
-        //}
+        public string Name { get; set; }
 
+        public int SSN { get; set; }
+
+        public string Address { get; set; }
+
+        public int Phone { get; set; }
+
+        public string Email { get; set; }
+
+        private void UpdateTeacher()
+        {
+            DeleteTeacher();
+            Create(new Touch_Point.Teacher(TeacherID, Name, SSN, Address, Phone, Email));
+            OnPropertyChanged(nameof(TeacherList));
+        }
+        public void Create(Touch_Point.Teacher newTeacher)
+        {
+            TeacherList.Add(newTeacher);
+        }
 
         private void CreateTeacher()
         {
-            for (int i = 0; i < TeacherList.Count; i++)
-            {
-                if (TeacherList[i].TeacherID == _selectedTeacher.TeacherID)
-                {
-                    TeacherList.RemoveAt(i);
-                    return;
-                }
-            }
+            Create(new Touch_Point.Teacher(TeacherID, Name, SSN, Address, Phone, Email));
+            OnPropertyChanged(nameof(TeacherList));
         }
 
         private void DeleteTeacher()

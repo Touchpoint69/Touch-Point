@@ -10,29 +10,34 @@ namespace Touch_Point.Models
     class StudentCatalog
     {
         private System.Collections.ObjectModel.ObservableCollection<Touch_Point.Student> _data;
+        private WebAPISource<Touch_Point.Student> _source;
 
         public StudentCatalog()
         {
             _data = new ObservableCollection<Student>();
+            _source = new WebAPISource<Student>("localhost:2726", "Students");
         }
 
         public ObservableCollection<Student> Data { get => _data; set => _data = value; }
 
-        public void Create(Touch_Point.Student newStudent)
+        public async void Create(Touch_Point.Student newStudent)
         {
             _data.Add(newStudent);
+            await _source.Create(newStudent);
         }
 
-        public void Delete(int id)
+        public async void Delete(int id)
         {
             for (int i = 0; i < _data.Count; i++)
             {
-                if (_data[i].StudentID == id)
+                if (_data[i].Student_ID == id)
                 {
                     _data.RemoveAt(i);
                     return;
                 }
             }
+
+            await _source.Delete(id);
         }
     }
 }

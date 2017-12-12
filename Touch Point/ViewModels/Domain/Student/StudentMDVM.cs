@@ -72,24 +72,24 @@ namespace Touch_Point.ViewModels.Domain.Student
 
                 if (_selectedStudent != null)
                 {
-                    StudentID = _selectedStudent.StudentID;
+                    Student_ID = _selectedStudent.Student_ID;
                     Name = _selectedStudent.Name;
                     SSN = _selectedStudent.SSN;
                     Address = _selectedStudent.Address;
                     Phone = _selectedStudent.Phone;
-                    Email = _selectedStudent.Email;
+                    E_mail = _selectedStudent.E_mail;
 
-                    OnPropertyChanged(nameof(StudentID));
+                    OnPropertyChanged(nameof(Student_ID));
                     OnPropertyChanged(nameof(Name));
                     OnPropertyChanged(nameof(SSN));
                     OnPropertyChanged(nameof(Address));
                     OnPropertyChanged(nameof(Phone));
-                    OnPropertyChanged(nameof(Email));
+                    OnPropertyChanged(nameof(E_mail));
                 }
             }
         }
 
-        public int StudentID { get; set; }
+        public int Student_ID { get; set; }
 
         public string Name { get; set; }
 
@@ -99,25 +99,25 @@ namespace Touch_Point.ViewModels.Domain.Student
 
         public int Phone { get; set; }
 
-        public string Email{ get; set; }
+        public string E_mail{ get; set; }
 
 
         private void DeleteStudent()
         {
-            _studentCatalog.Delete(_selectedStudent.StudentID);
+            _studentCatalog.Delete(_selectedStudent.Student_ID);
             OnPropertyChanged(nameof(Students));
         }
 
         private void UpdateStudent()
         {
             DeleteStudent();
-            _studentCatalog.Create(new Touch_Point.Student(StudentID, Name, SSN, Address, Phone, Email));
+            _studentCatalog.Create(new Touch_Point.Student(Student_ID, Name, SSN, Address, Phone, E_mail));
             OnPropertyChanged(nameof(Students));
         }
 
         private void CreateStudent()
         {
-            _studentCatalog.Create(new Touch_Point.Student(StudentID, Name, SSN, Address, Phone, Email));
+            _studentCatalog.Create(new Touch_Point.Student(Student_ID, Name, SSN, Address, Phone, E_mail));
             OnPropertyChanged(nameof(Students));
         }
 

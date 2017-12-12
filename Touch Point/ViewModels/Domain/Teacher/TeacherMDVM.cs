@@ -103,6 +103,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             OnPropertyChanged(nameof(TeacherList));
         }
 
+
         private void CreateTeacher()
         {
             _teacherCatalog.Create(new Touch_Point.Teacher(TeacherID, Name, SSN, Address, Phone, Email));
@@ -114,6 +115,7 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             _teacherCatalog.DeleteTeacher(_selectedTeacher.TeacherID);
             OnPropertyChanged(nameof(TeacherList));
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

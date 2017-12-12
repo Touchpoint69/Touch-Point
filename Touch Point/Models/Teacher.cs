@@ -30,38 +30,42 @@ namespace Touch_Point
         public int TeacherID
         {
             get{return _teacherID;}
+            set { _teacherID = value; }
         }
 
         public string Name
         {
             get { return _name; }
+            set { _name = value; }
         }
 
         public int SSN
         {
             get { return _SSN; }
+            set { _SSN = value; }
         }
 
         public string Address
         {
             get { return _address; }
+            set { _address = value; }
         }
 
         public int Phone
         {
             get { return _phone; }
+            set { _phone = value; }
         }
 
         public string Email
         {
             get { return _email; }
+            set { _email = value; }
         }
 
         public override string ToString()
         {
             return _name + " ID Nummer " + _teacherID + "   Telefon: "  + _phone;
         }
-
-        //Teacher aTeacher = new Teacher(01, "Bob", 1234567890, "45th Street Eastside Brooklyn", 12345678, "Bob@Gmail.com");
     }
 }

@@ -31,7 +31,7 @@ namespace Touch_Point.ViewModels.Domain.Student
 
             _deletionCommand = new RelayCommand(DeleteStudent, () => _selectedStudent != null);
             _updateCommand = new RelayCommand(UpdateStudent, () => _selectedStudent != null);
-            _createCommand = new RelayCommand(CreateStudent, () => _selectedStudent != null);
+            _createCommand = new RelayCommand(CreateStudent, () => true);
         }
 
         //Skal være der

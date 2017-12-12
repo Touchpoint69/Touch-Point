@@ -10,6 +10,7 @@
     <Page.DataContext>
         <course:CourseMDVM/>
     </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <!--Logo-->
@@ -50,15 +51,15 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,425,0,0" Text="Dato" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.Room}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" PlaceholderText="Dato" Text="{Binding SelectedCourse.Date}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Tid" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,525,0,0" PlaceholderText="Tid" Text="{Binding SelectedCourse.Time}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,575,0,0" Text="Underviser" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.CourseId}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="Underviser" Text="{Binding SelectedCourse.Teacher}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <!--RadioButtons to create, edit, save, delete and show bill-->
 

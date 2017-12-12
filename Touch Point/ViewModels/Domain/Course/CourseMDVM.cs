@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.ApplicationModel.UserDataTasks.DataProvider;
 using Touch_Point.Models;
+using Touch_Point.ViewModels.Domain.Teacher;
 
 namespace Touch_Point.ViewModels.Domain.Course
 {
@@ -20,7 +21,7 @@ namespace Touch_Point.ViewModels.Domain.Course
         {
             Courses = new ObservableCollection<Touch_Point.Course>();
             Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi",1,new DateTime(2018,1,4,12,0,0,0), "Jørgen");
-            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja",1,new DateTime(2018,1,3,12,0,0),  "Bolette");
+            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja",1,new DateTime(2018,1,3,12,0,0),teacher);
             Courses.Add(C1);
             Courses.Add(C2);
 

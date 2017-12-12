@@ -40,9 +40,9 @@
 
         <!--Titles-->
 
-        <TextBlock HorizontalAlignment="Left" Margin="50,150,0,0" Text="Details" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,150,0,0" Text="Kursist Detaljer" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="690,150,0,0" Text="List View" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="690,150,0,0" Text="Kursister" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
 
         <!--Text Bloks With Text Boxes to fill out information-->
 

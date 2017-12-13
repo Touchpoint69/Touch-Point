@@ -43,11 +43,10 @@ namespace Touch_Point.Models
                 if (_data[i].Student_ID == id)
                 {
                     _data.RemoveAt(i);
+                    await _source.Delete(id);
                     return;
                 }
             }
-
-            await _source.Delete(id);
         }
     }
 }

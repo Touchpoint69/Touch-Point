@@ -10,27 +10,27 @@ namespace Touch_Point
 {
     public class Teacher
     {
-        int _teacherID;
+        int _teacher_ID;
         string _name;
         int _SSN;
         string _address;
         int _phone;
-        string _email;
+        string _e_mail;
 
-        public Teacher(int teacherID, string name, int SSN, string address, int phone, string email)
+        public Teacher(int teacher_ID, string name, int SSN, string address, int phone, string e_mail)
         {
-            _teacherID = teacherID;
+            _teacher_ID = teacher_ID;
             _name = name;
             _SSN = SSN;
             _address = address;
             _phone = phone;
-            _email = email;
+            _e_mail = e_mail;
         }
 
-        public int TeacherID
+        public int Teacher_ID
         {
-            get{return _teacherID;}
-            set { _teacherID = value; }
+            get { return _teacher_ID; }
+            set { _teacher_ID = value; }
         }
 
         public string Name
@@ -57,15 +57,15 @@ namespace Touch_Point
             set { _phone = value; }
         }
 
-        public string Email
+        public string E_mail
         {
-            get { return _email; }
-            set { _email = value; }
+            get { return _e_mail; }
+            set { _e_mail = value; }
         }
 
         public override string ToString()
         {
-            return _name + " ID Nummer " + _teacherID + "   Telefon: "  + _phone;
+            return _name + " ID Nummer " + _teacher_ID + "   Telefon: " + _phone;
         }
     }
 }

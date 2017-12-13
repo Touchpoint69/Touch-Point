@@ -7,31 +7,58 @@ using System.Threading.Tasks;
 
 namespace Touch_Point.Models
 {
-  
-
-   class TeacherCatalog
+    class TeacherCatalog
     {
-        private System.Collections.ObjectModel.ObservableCollection<Touch_Point.Teacher> _teacherList;
-        public ObservableCollection<Teacher> TeacherList { get => _teacherList; set => _teacherList = value; }
+        private System.Collections.ObjectModel.ObservableCollection<Touch_Point.Teacher> _data;
+        private WebAPISource<Touch_Point.Teacher> _source;
+
         public TeacherCatalog()
         {
-          _teacherList = new ObservableCollection<Teacher>();
+            _data = new ObservableCollection<Teacher>();
+            _source = new WebAPISource<Teacher>("http://localhost:2726", "Teachers");
         }
-        public void Create(Touch_Point.Teacher newTeacher)
+
+        public ObservableCollection<Teacher> Data { get => _data; set => _data = value; }
+
+        public async void Load()
         {
-            TeacherList.Add(newTeacher);
-        }
-        public void DeleteTeacher(int id)
-        {
-            for (int i = 0; i < _teacherList.Count; i++)
+            List<Teacher> teachersFromDB = await _source.Load();
+
+            foreach (var item in teachersFromDB)
             {
-                if (_teacherList[i].TeacherID == id)
+                _data.Add(item);
+            }
+        }
+
+        public async void Create(Touch_Point.Teacher newTeacher)
+        {
+            _data.Add(newTeacher);
+            await _source.Create(newTeacher);
+        }
+
+        public async void Delete(int id)
+        {
+            for (int i = 0; i < _data.Count; i++)
+            {
+                if (_data[i].Teacher_ID == id)
                 {
-                    _teacherList.RemoveAt(i);
+                    _data.RemoveAt(i);
+                    await _source.Delete(id);
                     return;
                 }
             }
         }
+    }
+}
+        //public TeacherCatalog()
+        //{
+        //  _teacherList = new ObservableCollection<Teacher>();
+        //}
+        //public void Create(Touch_Point.Teacher newTeacher)
+        //{
+        //    TeacherList.Add(newTeacher);
+        //}
+
         //private System.Collections.ObjectModel.ObservableCollection<Touch_Point.Teacher> _data;
 
         //public TeacherCatalog()
@@ -57,5 +84,3 @@ namespace Touch_Point.Models
         //        }
         //    }
         //}
-    }
-}

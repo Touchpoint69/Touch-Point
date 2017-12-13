@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Touch_Point.Models;
 
 namespace Touch_Point
 {
@@ -65,7 +67,6 @@ namespace Touch_Point
         {
             return _name + " ID Nummer " + _student_ID + "   Telefon: " + _phone;
         }
-
-        //Student aStudent = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");
     }
 }
+        //Student aStudent = new Student(01, "Joe", 1234567890, "97th Street Westside Compton", 12345678, "Joe@Gmail.com");

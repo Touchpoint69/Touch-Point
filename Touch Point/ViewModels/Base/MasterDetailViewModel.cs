@@ -8,6 +8,5 @@ namespace Touch_Point.ViewModels.Base
 {
     class MasterDetailViewModel
     {
-
     }
 }

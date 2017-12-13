@@ -38,6 +38,7 @@ namespace Touch_Point.ViewModels.Domain.Student
         //Skal være der
         private StudentCatalog _studentCatalog;
         private Touch_Point.Student _selectedStudent;
+
         public ICommand DeletionCommand
         {
             get { return _deletionCommand; }
@@ -100,7 +101,7 @@ namespace Touch_Point.ViewModels.Domain.Student
 
         public int Phone { get; set; }
 
-        public string E_mail{ get; set; }
+        public string E_mail { get; set; }
 
 
         private void DeleteStudent()

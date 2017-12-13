@@ -19,31 +19,31 @@ namespace Touch_Point.ViewModels.Domain.Teacher
         private RelayCommand _deletionCommand;
         private RelayCommand _updateCommand;
         private RelayCommand _createCommand;
+
+        //Creater nye objekter i systemet
         public TeacherMDVM()
         {
             _teacherCatalog = new TeacherCatalog();
-            Touch_Point.Teacher T1 = new Touch_Point.Teacher(1,"Mohammed",0103782037,"Mestervej 4, holbæk",33564784,"Thelord@hotmail.com");
-            Touch_Point.Teacher T2 = new Touch_Point.Teacher(2, "Hanne", 1010104456, "Elisagårdsvej 54, Roskilde", 33554466, "TheSnark@hotmail.com");
-            _teacherCatalog.Create(T1);
-            _teacherCatalog.Create(T2);
+            _teacherCatalog.Load();
+            //Touch_Point.Teacher T1 = new Touch_Point.Teacher(1,"Mohammed",0103782037,"Mestervej 4, holbæk",33564784,"Thelord@hotmail.com");
+            //Touch_Point.Teacher T2 = new Touch_Point.Teacher(2, "Hanne", 1010104456, "Elisagårdsvej 54, Roskilde", 33554466, "TheSnark@hotmail.com");
+            //_teacherCatalog.Create(T1);
+            //_teacherCatalog.Create(T2);
 
             _deletionCommand = new RelayCommand(DeleteTeacher, () => _selectedTeacher != null);
             _updateCommand = new RelayCommand(UpdateTeacher, () => _selectedTeacher != null);
             _createCommand = new RelayCommand(CreateTeacher, () => true);
         }
 
-        private ObservableCollection<Touch_Point.Teacher> _TeacherList;
-        private Touch_Point.Teacher _selectedTeacher;
+        //Skal være der
         private TeacherCatalog _teacherCatalog;
+        private Touch_Point.Teacher _selectedTeacher;
 
-        public ObservableCollection<Touch_Point.Teacher> TeacherList
-        {
-            get { return _teacherCatalog.TeacherList; }
-        }
         public ICommand DeletionCommand
         {
             get { return _deletionCommand; }
         }
+
         public ICommand UpdateCommand
         {
             get { return _updateCommand; }
@@ -54,7 +54,13 @@ namespace Touch_Point.ViewModels.Domain.Teacher
             get { return _createCommand; }
         }
 
-        
+        //Contructor for en lister af Teacher
+        public ObservableCollection<Touch_Point.Teacher> Teachers
+        {
+            get { return _teacherCatalog.Data; }
+        }
+
+        //Metode til at vælge elementer i listen
         public Touch_Point.Teacher SelectedTeacher
         {
             get { return _selectedTeacher; }
@@ -68,23 +74,24 @@ namespace Touch_Point.ViewModels.Domain.Teacher
 
                 if (_selectedTeacher != null)
                 {
-                    TeacherID = _selectedTeacher.TeacherID;
+                    Teacher_ID = _selectedTeacher.Teacher_ID;
                     Name = _selectedTeacher.Name;
                     SSN = _selectedTeacher.SSN;
                     Address = _selectedTeacher.Address;
                     Phone = _selectedTeacher.Phone;
-                    Email = _selectedTeacher.Email;
+                    E_mail = _selectedTeacher.E_mail;
 
-                    OnPropertyChanged(nameof(TeacherID));
+                    OnPropertyChanged(nameof(Teacher_ID));
                     OnPropertyChanged(nameof(Name));
                     OnPropertyChanged(nameof(SSN));
                     OnPropertyChanged(nameof(Address));
                     OnPropertyChanged(nameof(Phone));
-                    OnPropertyChanged(nameof(Email));
+                    OnPropertyChanged(nameof(E_mail));
                 }
             }
         }
-        public int TeacherID { get; set; }
+
+        public int Teacher_ID { get; set; }
 
         public string Name { get; set; }
 
@@ -94,29 +101,29 @@ namespace Touch_Point.ViewModels.Domain.Teacher
 
         public int Phone { get; set; }
 
-        public string Email { get; set; }
+        public string E_mail { get; set; }
+
+
+        private void DeleteTeacher()
+        {
+            _teacherCatalog.Delete(_selectedTeacher.Teacher_ID);
+            OnPropertyChanged(nameof(Teacher));
+        }
 
         private void UpdateTeacher()
         {
             DeleteTeacher();
-            _teacherCatalog.Create(new Touch_Point.Teacher(TeacherID, Name, SSN, Address, Phone, Email));
-            OnPropertyChanged(nameof(TeacherList));
+            _teacherCatalog.Create(new Touch_Point.Teacher(Teacher_ID, Name, SSN, Address, Phone, E_mail));
+            OnPropertyChanged(nameof(Teacher));
         }
-
 
         private void CreateTeacher()
         {
-            _teacherCatalog.Create(new Touch_Point.Teacher(TeacherID, Name, SSN, Address, Phone, Email));
-            OnPropertyChanged(nameof(TeacherList));
+            _teacherCatalog.Create(new Touch_Point.Teacher(Teacher_ID, Name, SSN, Address, Phone, E_mail));
+            OnPropertyChanged(nameof(Teacher));
         }
 
-        private void DeleteTeacher()
-        {
-            _teacherCatalog.DeleteTeacher(_selectedTeacher.TeacherID);
-            OnPropertyChanged(nameof(TeacherList));
-        }
-
-
+        //Metode til property changed
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -126,3 +133,12 @@ namespace Touch_Point.ViewModels.Domain.Teacher
         }
     }
 }
+        // Hvis man ikke bruger databasen skal man bruge dette
+        //private ObservableCollection<Touch_Point.Teacher> _TeacherList;
+        //private Touch_Point.Teacher _selectedTeacher;
+        //private TeacherCatalog _teacherCatalog;
+
+        //public ObservableCollection<Touch_Point.Teacher> TeacherList
+        //{
+        //    get { return _teacherCatalog.TeacherList; }
+        //}

@@ -24,10 +24,11 @@ namespace Touch_Point.ViewModels.Domain.Student
         public StudentMDVM()
         {
             _studentCatalog = new StudentCatalog();
-            Touch_Point.Student S1 = new Touch_Point.Student(360, "Steven Jobs", 69696969, "MyPhone HQ 420, Vice City", 13371337, "YoMomma@hotmail.com");
-            Touch_Point.Student S2 = new Touch_Point.Student(69, "Will Gates", 42091169, "NanoSoft HQ 911, Middle of fuckin nowhere", 14881488, "IEatAss@Yahoo.com");
-            _studentCatalog.Create(S1);
-            _studentCatalog.Create(S2);
+            _studentCatalog.Load();
+            //Touch_Point.Student S1 = new Touch_Point.Student(360, "Steven Jobs", 69696969, "MyPhone HQ 420, Vice City", 13371337, "YoMomma@hotmail.com");
+            //Touch_Point.Student S2 = new Touch_Point.Student(69, "Will Gates", 42091169, "NanoSoft HQ 911", 14881488, "IEatAss@Yahoo.com");
+            //_studentCatalog.Create(S1);
+            //_studentCatalog.Create(S2);
 
             _deletionCommand = new RelayCommand(DeleteStudent, () => _selectedStudent != null);
             _updateCommand = new RelayCommand(UpdateStudent, () => _selectedStudent != null);

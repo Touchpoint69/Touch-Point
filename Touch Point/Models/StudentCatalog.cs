@@ -15,10 +15,20 @@ namespace Touch_Point.Models
         public StudentCatalog()
         {
             _data = new ObservableCollection<Student>();
-            _source = new WebAPISource<Student>("localhost:2726", "Students");
+            _source = new WebAPISource<Student>("http://localhost:2726", "Students");
         }
 
         public ObservableCollection<Student> Data { get => _data; set => _data = value; }
+
+        public async void Load()
+        {
+            List<Student> studentsFromDB = await _source.Load();
+
+            foreach (var item in studentsFromDB)
+            {
+                _data.Add(item);
+            }
+        }
 
         public async void Create(Touch_Point.Student newStudent)
         {

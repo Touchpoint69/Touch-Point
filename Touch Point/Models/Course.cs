@@ -13,27 +13,27 @@ namespace Touch_Point
     public class Course
     {
         //Instance Fields
-        int _courseID;
+        int _course_ID;
         string _title;
-        int _location;
-        DateTime _time;
-        string _teacher;
+        int _room;
+        DateTime _date;
+        string _teacher_ID;
 
-        public Course(int courseID,string title,int location,DateTime time, string teacher)
+        public Course(int course_ID,string title,int room,DateTime date, string teacher_ID)
         {//Contructor for et Course objekt
-            _courseID = courseID;
+            _course_ID = course_ID;
             _title = title;
-            _location = location;
-            _time = time;
+            _room = room;
+            _date = date;
             //Sampletid skal erstattes af datetime
-            _teacher = teacher; // teacher skal være objektet teacher ikke en string
+            _teacher_ID = teacher_ID; // teacher skal være objektet teacher ikke en string
         }
 
         //Properties Til at gøre instance fields settable for andre klasser
-        public int CourseID
+        public int Course_ID
         {
-            get { return _courseID; }
-            set { _courseID = value; }
+            get { return _course_ID; }
+            set { _course_ID = value; }
         }
 
         public string Title
@@ -42,28 +42,28 @@ namespace Touch_Point
             set { _title = value; }
         }
 
-        public int Location
+        public int Room
         {
-            get { return _location; }
-            set { _location = value; }
+            get { return _room; }
+            set { _room = value; }
         }
 
-        public DateTime Time
+        public DateTime Date
         {
-            get { return _time; }
-            set { _time = value; }
+            get { return _date; }
+            set { _date = value; }
         }
 
-        public string Teacher
+        public string Teacher_ID
         {
-            get { return _teacher; }
-            set { _teacher = value; }
+            get { return _teacher_ID; }
+            set { _teacher_ID = value; }
         }
 
         //override metode så det ser godt ud i listen
         public override string ToString()
         {
-            return "This is a " + _title + " Kursus Afholdt af " + _teacher;
+            return "This is a " + _title + " Kursus Afholdt af " + _teacher_ID;
         }
     }
 }

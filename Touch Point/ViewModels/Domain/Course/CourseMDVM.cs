@@ -23,10 +23,11 @@ namespace Touch_Point.ViewModels.Domain.Course
         public CourseMDVM()
         {
             _courseCatalog = new CourseCatalog();
-            Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi", 666, new DateTime(2018,1,4,12,0,0,0), "Jørgen");
-            Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja", 420, new DateTime(2018,1,3,12,0,0), "Bolette");
-            _courseCatalog.Create(C1);
-            _courseCatalog.Create(C2);
+            _courseCatalog.Load();
+            //Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi", 666, new DateTime(2018,1,4,12,0,0,0), "Jørgen");
+            //Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja", 420, new DateTime(2018,1,3,12,0,0), "Bolette");
+            //_courseCatalog.Create(C1);
+            //_courseCatalog.Create(C2);
 
             _deletionCommand = new RelayCommand(DeleteCourse, () => _selectedCourse != null);
             _updateCommand = new RelayCommand(UpdateCourse, () => _selectedCourse != null);
@@ -71,30 +72,30 @@ namespace Touch_Point.ViewModels.Domain.Course
 
                 if (_selectedCourse != null)
                 {
-                    CourseID = _selectedCourse.CourseID;
+                    Course_ID = _selectedCourse.Course_ID;
                     Title = _selectedCourse.Title;
-                    Location = _selectedCourse.Location;
-                    Time = _selectedCourse.Time;
+                    Room = _selectedCourse.Room;
+                    Date = _selectedCourse.Date;
                     // Teacher = _selectedCourse.Teacher;
 
 
-                    OnPropertyChanged(nameof(CourseID));
+                    OnPropertyChanged(nameof(Course_ID));
                     OnPropertyChanged(nameof(Title));
-                    OnPropertyChanged(nameof(Location));
-                    OnPropertyChanged(nameof(Time));
-                    OnPropertyChanged(nameof(Teacher));
+                    OnPropertyChanged(nameof(Room));
+                    OnPropertyChanged(nameof(Date));
+                    // OnPropertyChanged(nameof(Teacher_ID));
 
                 }
             }
         }
 
-        public int CourseID { get; set; }
+        public int Course_ID { get; set; }
 
         public string Title { get; set; }
 
-        public int Location { get; set; }
+        public int Room { get; set; }
 
-        public DateTime Time { get; set; }
+        public DateTime Date { get; set; }
 
         public Touch_Point.Teacher SelectedTeacher
         {
@@ -114,20 +115,20 @@ namespace Touch_Point.ViewModels.Domain.Course
 
         private void DeleteCourse()
         {
-            _courseCatalog.Delete(_selectedCourse.CourseID);
+            _courseCatalog.Delete(_selectedCourse.Course_ID);
             OnPropertyChanged(nameof(Courses));
         }
 
         private void UpdateCourse()
         {
             DeleteCourse();
-            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, SelectedTeacher.Name));
+            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, SelectedTeacher.Name));
             OnPropertyChanged(nameof(Course));
         }
 
         private void CreateCourse()
         {
-            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, SelectedTeacher.Name));
+            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, SelectedTeacher.Name));
             OnPropertyChanged(nameof(Course));
         }
 

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="Touch_Point.Views.TilmeldKursist"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Touch_Point"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:course="using:Touch_Point.ViewModels.Domain.Student"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <course:StudentMDVM/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Logo-->
+
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Assets/TouchPoint Logo.jpg" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Button x:Name="_FrontPage_" Height="50" Width="50" Margin="0,0,0,0" VerticalAlignment="Top" Click="_AdminButton__Click">
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/House-Icon.png"/>
+            </Button.Background>
+        </Button>
+
+        <TextBlock  HorizontalAlignment="Left" Margin="50,150,0,0" Text="Kursus" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        
+        <ComboBox HorizontalAlignment="Left" Margin="50,200,0,0" Width="550" Background="#66F0F0F0"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="690,150,0,0" Text="Tilgængelige Kursister" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        
+        <ListView HorizontalAlignment="Left" Margin="690,200,0,50" Width="540" Background="#FFF0F0F0" BorderBrush="Gray" BorderThickness="5" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}"/>
+        
+        <Button Content="Tildmeld" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+
+        <Button Content="Afmeld" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
+        
+    </Grid>
+</Page>

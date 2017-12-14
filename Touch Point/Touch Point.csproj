@@ -120,6 +120,9 @@
     <Compile Include="Views\Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AfmeldKursist.xaml.cs">
+      <DependentUpon>AfmeldKursist.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateCourse.xaml.cs">
       <DependentUpon>CreateCourse.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,9 @@
     </Compile>
     <Compile Include="Views\CreateTeacher.xaml.cs">
       <DependentUpon>CreateTeacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TilmeldKursist.xaml.cs">
+      <DependentUpon>TilmeldKursist.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +206,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\AfmeldKursist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CreateCourse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -209,6 +219,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CreateTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TilmeldKursist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

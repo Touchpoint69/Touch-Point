@@ -75,7 +75,7 @@ namespace Touch_Point.ViewModels.Domain.Course
                     Title = _selectedCourse.Title;
                     Location = _selectedCourse.Location;
                     Time = _selectedCourse.Time;
-                    Teacher = _selectedCourse.Teacher;
+                    // Teacher = _selectedCourse.Teacher;
 
 
                     OnPropertyChanged(nameof(CourseID));
@@ -96,7 +96,20 @@ namespace Touch_Point.ViewModels.Domain.Course
 
         public DateTime Time { get; set; }
 
-        public string Teacher { get; set; }
+        public Touch_Point.Teacher SelectedTeacher
+        {
+            get; set;
+        }
+
+        public ObservableCollection<Touch_Point.Teacher> TeacherList
+        {
+            get
+            {
+                TeacherCatalog tc = new TeacherCatalog();
+                tc.Load();
+                return tc.Data;
+            }
+        }
 
 
         private void DeleteCourse()
@@ -108,13 +121,13 @@ namespace Touch_Point.ViewModels.Domain.Course
         private void UpdateCourse()
         {
             DeleteCourse();
-            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, Teacher));
+            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, SelectedTeacher.Name));
             OnPropertyChanged(nameof(Course));
         }
 
         private void CreateCourse()
         {
-            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, Teacher));
+            _courseCatalog.Create(new Touch_Point.Course(CourseID, Title, Location, Time, SelectedTeacher.Name));
             OnPropertyChanged(nameof(Course));
         }
 

@@ -24,10 +24,6 @@ namespace Touch_Point.ViewModels.Domain.Course
         {
             _courseCatalog = new CourseCatalog();
             _courseCatalog.Load();
-            //Touch_Point.Course C1 = new Touch_Point.Course(11, "Zoneterapi", 666, new DateTime(2018,1,4,12,0,0,0), "Jørgen");
-            //Touch_Point.Course C2 = new Touch_Point.Course(14, "Ninja", 420, new DateTime(2018,1,3,12,0,0), "Bolette");
-            //_courseCatalog.Create(C1);
-            //_courseCatalog.Create(C2);
 
             _deletionCommand = new RelayCommand(DeleteCourse, () => _selectedCourse != null);
             _updateCommand = new RelayCommand(UpdateCourse, () => _selectedCourse != null);
@@ -76,14 +72,12 @@ namespace Touch_Point.ViewModels.Domain.Course
                     Title = _selectedCourse.Title;
                     Room = _selectedCourse.Room;
                     Date = _selectedCourse.Date;
-                    // Teacher = _selectedCourse.Teacher;
 
 
                     OnPropertyChanged(nameof(Course_ID));
                     OnPropertyChanged(nameof(Title));
                     OnPropertyChanged(nameof(Room));
                     OnPropertyChanged(nameof(Date));
-                    // OnPropertyChanged(nameof(Teacher_ID));
 
                 }
             }
@@ -95,7 +89,7 @@ namespace Touch_Point.ViewModels.Domain.Course
 
         public int Room { get; set; }
 
-        public DateTime Date { get; set; }
+        public int Date { get; set; }
 
         public Touch_Point.Teacher SelectedTeacher
         {
@@ -121,14 +115,16 @@ namespace Touch_Point.ViewModels.Domain.Course
 
         private void UpdateCourse()
         {
+            string teacherName = SelectedTeacher != null ? SelectedTeacher.Teacher_ID.ToString() : "";
             DeleteCourse();
-            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, SelectedTeacher.Name));
+            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, teacherName));
             OnPropertyChanged(nameof(Course));
         }
 
         private void CreateCourse()
         {
-            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, SelectedTeacher.Name));
+            string teacherName = SelectedTeacher != null ? SelectedTeacher.Teacher_ID.ToString() : "";
+            _courseCatalog.Create(new Touch_Point.Course(Course_ID, Title, Room, Date, teacherName));
             OnPropertyChanged(nameof(Course));
         }
 

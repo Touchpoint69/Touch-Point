@@ -49,19 +49,19 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" Text="Kursus ID" VerticalAlignment="Top" FontWeight="Bold"/>
         
-        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus Nummer" Text="{Binding SelectedCourse.Course_ID}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,225,0,0" PlaceholderText="Kursus Nummer" Text="{Binding Course_ID, Mode=TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,275,0,0" Text="Kursus Navn" VerticalAlignment="Top" FontWeight="Bold"/>
-        
-        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0" PlaceholderText="Kursus Navn" Text="{Binding SelectedCourse.Title}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="50,300,0,0" PlaceholderText="Kursus Navn" Text="{Binding Title, Mode=TwoWay}"  Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" Text="Lokale"  VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="50,375,0,0" PlaceholderText ="Lokale" Text="{Binding SelectedCourse.Room}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,375,0,0" PlaceholderText ="Lokale" Text="{Binding Room, Mode=TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,425,0,0" Text="Dato" VerticalAlignment="Top" FontWeight="Bold"/>
         
-        <DatePicker HorizontalAlignment="Left" Margin="50,450,0,0" Width="550" IsEnabled="{Binding ViewControlStates[Date].Enabled}" Visibility="{Binding ViewControlStates[Date].VisibilityState}" Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,450,0,0" Width="550"  Text="{Binding Date, Mode=TwoWay}" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="50,500,0,0" Text="Tid" VerticalAlignment="Top" FontWeight="Bold"/>
 
@@ -71,7 +71,7 @@
 
         <ComboBox x:Name="ComboBoxTeacher" HorizontalAlignment="Left" 
                   Margin="50,600,0,0" Width="550" Background="#66F0F0F0" 
-                  ItemsSource="{Binding TeacherList}" SelectedItem="{Binding SelectedTeacher}"/>
+                  ItemsSource="{Binding TeacherList}" SelectedItem="{Binding SelectedTeacher, Mode=TwoWay}"/>
 
         <Button Content="Opret Ny" Command="{Binding CreateCommand}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 

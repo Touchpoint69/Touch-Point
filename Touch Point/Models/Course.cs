@@ -16,10 +16,10 @@ namespace Touch_Point
         int _course_ID;
         string _title;
         int _room;
-        DateTime _date;
+        int _date;
         string _teacher_ID;
 
-        public Course(int course_ID,string title,int room,DateTime date, string teacher_ID)
+        public Course(int course_ID,string title,int room,int date, string teacher_ID)
         {//Contructor for et Course objekt
             _course_ID = course_ID;
             _title = title;
@@ -48,7 +48,7 @@ namespace Touch_Point
             set { _room = value; }
         }
 
-        public DateTime Date
+        public int Date
         {
             get { return _date; }
             set { _date = value; }

@@ -14,8 +14,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <!--Logo-->
-        
-        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1260">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Assets/TouchPoint Logo.jpg" Stretch="None"/>
             </Rectangle.Fill>
@@ -61,7 +61,7 @@
 
         <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="Underviser" Text="{Binding SelectedCourse.Teacher_ID}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <!--RadioButtons to create, edit, save, delete and show bill-->
+        <!--Buttons to create, edit, and delete-->
 
         <Button Content="Tildmeld" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5" Click="Button_Click"/>
 

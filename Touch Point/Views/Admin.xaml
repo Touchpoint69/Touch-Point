@@ -10,8 +10,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <!--Logo-->
-        
-        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top">
+
+        <Rectangle Height="150" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1260">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="ms-appx:///Assets/TouchPoint Logo.jpg" Stretch="None"/>
             </Rectangle.Fill>

@@ -72,7 +72,7 @@
 
         <TextBox HorizontalAlignment="Left" Margin="50,600,0,0" PlaceholderText="E-Mail" Text="{Binding E_mail, Mode=TwoWay}" Width="550" VerticalAlignment="Top" Background="#66F0F0F0"/>
 
-        <!--RadioButtons to create, edit, save, delete and show bill-->
+        <!--Buttons to create, edit, and delete-->
 
         <Button Content="Opret Ny" Command="{Binding CreateCommand}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 

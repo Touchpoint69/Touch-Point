@@ -73,6 +73,8 @@
                   Margin="50,600,0,0" Width="550" Background="#66F0F0F0" 
                   ItemsSource="{Binding TeacherList}" SelectedItem="{Binding SelectedTeacher, Mode=TwoWay}"/>
 
+        <!--Buttons to create, edit, and delete-->
+
         <Button Content="Opret Ny" Command="{Binding CreateCommand}" Margin="50,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>
 
         <Button Content="Rediger" Command="{Binding UpdateCommand}" Margin="200,650,0,0" VerticalAlignment="Top" Width="100" BorderBrush="Gray" BorderThickness="5"/>

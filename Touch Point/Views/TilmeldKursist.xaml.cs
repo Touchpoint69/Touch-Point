@@ -31,5 +31,10 @@ namespace Touch_Point.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AfmeldKursist));
+        }
     }
 }
